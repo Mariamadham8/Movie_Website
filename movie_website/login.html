@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* background-image: url(img/log.jpg);*/
+            background-color: #3b3b3b;
+            background-size: cover;
+            background-blur: 8px;
+            height: 100vh;
+            scrollbar-color: #4eaaa5;
+            scrollbar-darkshadow-color: #312d2d;
+        }
+
+
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #navleft img {
+            width: 60px;
+            height: 50px;
+        }
+
+
+        #navleft {
+            display: flex;
+            margin-left: 20px;
+        }
+
+        #navbar #navleft a {
+            text-decoration: none;
+            color: #4eaaa5;
+            font-size: 30px;
+            font-weight: 700px;
+            margin-top: 9px;
+            margin-left: -18px;
+
+
+
+        }
+
+        #navbar #navcenter a:hover {
+            color: #4eaaa5;
+        }
+
+        #navcenter a {
+
+            margin-left: 20px;
+            text-decoration: none;
+            color: #ffff;
+            font-size: 20px;
+        }
+
+        #navright {
+            margin-right: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #navright span {
+            margin-right: 12px;
+            cursor: pointer;
+            font-size: 30px;
+            color: #ffff;
+        }
+
+        .background-blur {
+            padding: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+
+        .login-container {
+
+            width: 300px;
+            height: 350px;
+            background: rgba(255, 255, 255, .9);
+            padding: 20px;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+            height: 400px;
+            margin-top: 40px;
+
+        }
+
+
+        .login-container h1 {
+            margin: 0;
+            color: #3c8d97;
+        }
+
+        .input-container {
+            position: relative;
+            margin: 70px;
+            margin-left: -10px;
+
+        }
+
+        input {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            border-bottom: 1px solid #333;
+            outline: none;
+            background: none;
+        }
+
+        label {
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            color: #333;
+            pointer-events: none;
+            transition: 0.3s;
+            font-size: 20px;
+        }
+
+        input:focus+label,
+        input:valid+label {
+            top: -10px;
+            font-size: 30px;
+            color: #3c8d97;
+        }
+
+        .glowing-button {
+            background-color: #312d2d;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+            font-size: 20px;
+        }
+
+        .glowing-button:hover {
+
+            background: #adab89;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1.5);
+        }
+
+        #last {
+            padding: 0px 0px 0px 0px;
+
+        }
+
+        #p1left h3 {
+            color: #ddd;
+        }
+
+        #lotf {
+            margin-left: 260px;
+        }
+
+        .border {
+            margin: 100px 0px;
+            border: 2px solid rgb(27, 27, 27);
+            display: flex;
+            background-color: #312d2d;
+            height: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="navleft">
+            <img src="img/e.png">
+            <a href="#">cinima</a>
+        </div>
+        <div id="navcenter">
+            <a href="#">Home</a>
+            <a href="#">movies</a>
+            <a href="#">Tv_shows</a>
+            <a href="#">contact us</a>
+            <a href="#">About us</a>
+        </div>
+        <div id="navright">
+            <span class="material-symbols-outlined">
+                search
+            </span>
+            <span class="material-symbols-outlined">
+                notifications
+            </span>
+        </div>
+    </div>
+    <div class="background-blur">
+        <div class="login-container">
+            <h1>Login</h1>
+            <form>
+                <div class="input-container">
+                    <input type="text" id="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit" class="glowing-button">Submit</button>
+            </form>
+            <br>
+            <br> <br>
+            <br> <br>
+        </div>
+        <div id="lotf">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                type="module"></script>
+
+            <dotlottie-player src="https://lottie.host/8bb2abbf-5f29-4f85-a478-5d3ed70c2df7/AvY5v5fAQu.json"
+                background="transparent" speed="1" style="width: 400px; height: 300px;" loop
+                autoplay></dotlottie-player>
+        </div>
+    </div>
+    <div class="border">
+        <section id="last">
+            <div id="p1left">
+                <h3>copy right@2023 all the rights are presrved </h3>
+            </div>
+            <div id="p1right">
+                <img src="img/card_img.png">
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
+
+
+</body>
+
+</html>

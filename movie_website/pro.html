@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        * {
+            font-family: 'Playpen Sans', cursive;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+
+
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        #content {
+            padding: 10px;
+            width: 100%;
+            background-image: url(img/banner_bg01.jpg);
+            background-repeat: no-repeat;
+            background-position: top right;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #navleft img {
+            width: 60px;
+            height: 50px;
+        }
+
+
+        #navleft {
+            display: flex;
+            margin-left: 20px;
+        }
+
+        #navbar #navleft a {
+            text-decoration: none;
+            color: #4eaaa5;
+            font-size: 30px;
+            font-weight: 700px;
+            margin-top: 9px;
+            margin-left: -18px;
+
+
+
+        }
+
+        #navbar #navcenter a:hover {
+            color: #4eaaa5;
+        }
+
+        #navcenter a {
+
+            margin-left: 20px;
+            text-decoration: none;
+            color: #ffff;
+            font-size: 20px;
+        }
+
+        #navright {
+            margin-right: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #navright span {
+            margin-right: 12px;
+            cursor: pointer;
+            font-size: 30px;
+            color: #ffff;
+        }
+
+        #navright button {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background: none;
+            border: none;
+            padding: 10px;
+            color: #ffff;
+            width: 90px;
+            height: 50px;
+            border-radius: 30px;
+            border: solid #4eaaa5 3px;
+            font-size: 20px;
+            transition: 0.4;
+        }
+
+        #navright button a {
+            color: #ffff;
+            text-decoration: none;
+        }
+
+        #navright button:hover {
+            background-color: #4eaaa5;
+            color: #333;
+        }
+
+        #center {
+            padding: 250px 40px;
+        }
+
+        #center h2 {
+            color: #4eaaa5;
+            font-size: 25px;
+        }
+
+        #center #hcenter {
+            font-size: 50px;
+            color: #ffff;
+            font-weight: 600px;
+        }
+
+        #center span {
+            font-size: 50px;
+            color: #3c8884;
+            font-weight: 600px;
+        }
+
+        #center #btn {
+            display: flex;
+
+
+        }
+
+        #center #btn button {
+            margin-right: 30px;
+            background: #4eaaa5;
+            border: none;
+            padding: 10px;
+            color: #ffff;
+            width: 150px;
+            height: 50px;
+            border-radius: 30px;
+            border: solid #4eaaa5 3px;
+            font-size: 20px;
+            transition: 0.4;
+            cursor: pointer;
+        }
+
+        #mainposter {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-image: url(img/services_bg.jpg);
+            background-position: right top;
+            background-repeat: no-repeat;
+        }
+
+        #title {
+            margin-bottom: 100px;
+            width: 100%;
+            height: 100%;
+            padding-top: 10px;
+            margin: 80px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #left {
+            font-size: 30px;
+            font-weight: 600px;
+            color: #3c8884;
+            margin-top: -30px;
+
+
+        }
+
+        #left span {
+            color: #ffff;
+            font-size: 40px;
+
+        }
+
+        #right button {
+            background: none;
+            border: none;
+            padding: 10px;
+            color: #ffff;
+            width: 170px;
+            height: 50px;
+            border-radius: 30px;
+            border: solid #333 3px;
+            font-size: 20px;
+            transition: 0.4;
+        }
+
+        #right button:hover {
+            background-color: #3c8884;
+            transition: 0.4;
+            transform: scale(1.04);
+        }
+
+        #cards {
+            margin-top: -80px;
+            padding: 15px;
+            position: relative;
+            overflow: hidden;
+            width: 250px;
+            height: 350px;
+            border-radius: 14px;
+        }
+
+        #poster {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #poster img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            transition: .5s;
+
+        }
+
+        #datalist {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: auto;
+            padding: 1.5em 1.5em 2em;
+            backdrop-filter: blur(12px);
+            background-color: #0000009c;
+            transition: .5s;
+
+        }
+
+        #cards:hover #datalist {
+            bottom: 0px;
+        }
+
+        #datalist #m {
+            color: #ffff;
+            font-weight: 40px;
+            margin-left: 20px;
+
+        }
+
+        #datalist p {
+
+            color: #ffff;
+            font-weight: 40px;
+            margin-left: 20px;
+        }
+
+        #rate {
+            margin-right: 90px;
+        }
+
+        #rate input {
+            display: none;
+        }
+
+        #rate label {
+            float: right;
+            cursor: pointer;
+            color: #ffff;
+            transition: 0.3s;
+        }
+
+        label::before {
+            content: '\2605';
+            font-size: 40px;
+        }
+
+        #rate input:checked~label,
+        #rate label:hover,
+        #rate label:hover~label {
+            color: #3c8884;
+            transition: 0.3s;
+        }
+
+
+        #rate button {
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+            background: #438d89;
+            border: none;
+            padding: 10px;
+            color: #ffff;
+            width: 180px;
+            height: 50px;
+            border-radius: 30px;
+            border: solid #438d89 1px;
+            font-size: 20px;
+            transition: 0.4;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        #rate button span:hover {
+            color: rgb(136, 34, 34);
+        }
+
+        #rate button:hover {
+            transition: .8;
+
+        }
+
+        #live {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+            background-image: url(img/live_bg.jpg);
+            background-repeat: no-repeat;
+            background-position: top;
+        }
+
+        #live #left p {
+            color: #4eaaa5;
+            font-size: 15px;
+            font-weight: 500px;
+        }
+
+        #live #left #h1 {
+            font-size: 35px;
+            color: #3c8884;
+        }
+
+        #live #left #n {
+            color: #333;
+        }
+
+        #live #left h1 {
+            color: rgb(110, 58, 58);
+        }
+
+        #live #left button {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+            background: #438d89;
+            border: none;
+            padding: 10px;
+            color: #ffff;
+            width: 200px;
+            height: 50px;
+            border-radius: 30px;
+            border: solid #438d89 1px;
+            font-size: 20px;
+            transition: 0.4;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #live #left span {
+            text-align: center;
+            font-size: 30px;
+            color: #333;
+        }
+
+        #title2 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #title2 #div {
+            font-size: 12px;
+            color: #3c8884;
+            text-align: center;
+        }
+
+        #info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+            background-image: url(img/footer_bg.jpg);
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+
+        #info #logo a {
+            text-decoration: none;
+            color: #438d89;
+            font-size: 30px;
+            font-weight: 700;
+            margin-right: 430px;
+        }
+
+        #info #inforighr a {
+            text-decoration: none;
+            color: #ddd;
+            font-size: 20px;
+            font-weight: 700;
+            margin-right: 10px
+        }
+
+        #info #inforighr input {
+            padding: 12px;
+            border: none;
+            background-color: #ddd;
+            border-radius: 40px;
+            width: 200px;
+            border: solid #438d89 2px;
+        }
+
+        #logo img {
+            width: 60px;
+            height: 50px;
+        }
+
+        #last {
+            padding: 20px;
+            background-color: #21232b;
+        }
+
+        #p1left,
+        #p1right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #p1left h3 {
+            color: #ddd;
+        }
+    </style>
+</head>
+
+
+<body>
+    <section id="content">
+        <div id="navbar">
+            <div id="navleft">
+                <img src="img/e.png">
+                <a href="#">cinima</a>
+            </div>
+            <div id="navcenter">
+                <a href="#">Home</a>
+                <a href="#">movies</a>
+                <a href="#">Tv_shows</a>
+                <a href="#">contact us</a>
+                <a href="#">About us</a>
+            </div>
+            <div id="navright">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+                <button>
+                    <a href="login.html">login</a>
+                </button>
+            </div>
+        </div>
+        <div id="center">
+            <h2> Cinma</h2>
+            <h1 id="hcenter">Home Of <span>intertanement</span></h1>
+            <div id="btn">
+                <button>Watch Now</button>
+                <button>More</button>
+            </div>
+        </div>
+    </section>
+    <section id="mainposter">
+        <div id="title">
+            <div id="left">
+                <p>Best <br>
+                    <span>movies</span>
+                </p>
+            </div>
+            <div id="right">
+                <button>Most popular</button>
+                <button>Most New</button>
+                <button>Most rated</button>
+            </div>
+        </div>
+
+        <div id="cards">
+            <div id="poster">
+                <img src="img/13.jpg">
+            </div>
+            <div id="datalist">
+                <h1 id="m">Movie name</h1>
+                <p>Lorem ipsum dolor,<br>
+                    sit amet consectetur<br>
+                    Corrupti temporibus </p>
+                <div id="rate">
+                    <input type="radio" id="star1">
+                    <label for="star1"></label>
+                    <input type="radio" id="star2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star3">
+                    <label for="sta3r"></label>
+                    <input type="radio" id="star4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star5">
+                    <label for="sta5r"></label>
+                    <br>
+                    <button>
+                        <span class="material-symbols-outlined">
+                            favorite
+                        </span>
+                        Add to fav
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div id="cards">
+            <div id="poster">
+                <img src="img/14.jpg">
+            </div>
+            <div id="datalist">
+                <h1 id="m">Movie name</h1>
+                <p>Lorem ipsum dolor,<br>
+                    sit amet consectetur<br>
+                    Corrupti temporibus </p>
+                <div id="rate">
+                    <input type="radio" id="star1">
+                    <label for="star1"></label>
+                    <input type="radio" id="star2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star3">
+                    <label for="sta3r"></label>
+                    <input type="radio" id="star4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star5">
+                    <label for="sta5r"></label>
+                    <br>
+                    <button>
+                        <span class="material-symbols-outlined">
+                            favorite
+                        </span>
+                        Add to fav
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="cards">
+            <div id="poster">
+                <img src="img/qq.jpg">
+            </div>
+            <div id="datalist">
+                <h1 id="m">Movie name</h1>
+                <p>Lorem ipsum dolor,<br>
+                    sit amet consectetur<br>
+                    Corrupti temporibus </p>
+                <div id="rate">
+                    <input type="radio" id="star1">
+                    <label for="star1"></label>
+                    <input type="radio" id="star2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star3">
+                    <label for="sta3r"></label>
+                    <input type="radio" id="star4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star5">
+                    <label for="sta5r"></label>
+                    <br>
+                    <button>
+                        <span class="material-symbols-outlined">
+                            favorite
+                        </span>
+                        Add to fav
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="cards">
+            <div id="poster">
+                <img src="img/10.jpg">
+            </div>
+            <div id="datalist">
+                <h1 id="m">Movie name</h1>
+                <p>Lorem ipsum dolor,<br>
+                    sit amet consectetur<br>
+                    Corrupti temporibus </p>
+                <div id="rate">
+                    <input type="radio" id="star1">
+                    <label for="star1"></label>
+                    <input type="radio" id="star2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star3">
+                    <label for="sta3r"></label>
+                    <input type="radio" id="star4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star5">
+                    <label for="sta5r"></label>
+                    <br>
+                    <button>
+                        <span class="material-symbols-outlined">
+                            favorite
+                        </span>
+                        Add to fav
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="live">
+        <div id="left">
+            <h1 id="h1">Make life more sweet<br>
+                with your ones</h1>
+            <p id="n">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci.<br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus e</p>
+            <h1>4K +12K </h1>
+            <button>
+                <span class="material-symbols-outlined">
+                    card_membership
+                </span>
+                supescribe now
+            </button>
+
+        </div>
+        <div id="right">
+            <img src="img/live_img.png">
+        </div>
+    </section>
+
+    <section id="mainposter">
+        <div id="title">
+            <div id="left">
+                <p>Best <br>
+                    <span>tv_shows</span>
+                </p>
+            </div>
+            <div id="right">
+                <button>More....</button>
+            </div>
+        </div>
+
+        <div id="cards">
+            <div id="poster">
+                <img src="img/ucm_poster06.jpg">
+            </div>
+            <div id="datalist">
+                <h1 id="m">Movie name</h1>
+                <p>Lorem ipsum dolor,<br>
+                    sit amet consectetur<br>
+                    Corrupti temporibus </p>
+                <div id="rate">
+                    <input type="radio" id="star1">
+                    <label for="star1"></label>
+                    <input type="radio" id="star2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star3">
+                    <label for="sta3r"></label>
+                    <input type="radio" id="star4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star5">
+                    <label for="sta5r"></label>
+                    <br>
+                    <button>
+                        <span class="material-symbols-outlined">
+                            favorite
+                        </span>
+                        Add to fav
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div id="cards">
+            <div id="poster">
+                <img src="img/ucm_poster04.jpg">
+            </div>
+            <div id="datalist">
+                <h1 id="m">Movie name</h1>
+                <p>Lorem ipsum dolor,<br>
+                    sit amet consectetur<br>
+                    Corrupti temporibus </p>
+                <div id="rate">
+                    <input type="radio" id="star1">
+                    <label for="star1"></label>
+                    <input type="radio" id="star2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star3">
+                    <label for="sta3r"></label>
+                    <input type="radio" id="star4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star5">
+                    <label for="sta5r"></label>
+                    <br>
+                    <button>
+                        <span class="material-symbols-outlined">
+                            favorite
+                        </span>
+                        Add to fav
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="cards">
+            <div id="poster">
+                <img src="img/ucm_poster03.jpg">
+            </div>
+            <div id="datalist">
+                <h1 id="m">Movie name</h1>
+                <p>Lorem ipsum dolor,<br>
+                    sit amet consectetur<br>
+                    Corrupti temporibus </p>
+                <div id="rate">
+                    <input type="radio" id="star1">
+                    <label for="star1"></label>
+                    <input type="radio" id="star2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star3">
+                    <label for="sta3r"></label>
+                    <input type="radio" id="star4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star5">
+                    <label for="sta5r"></label>
+                    <br>
+                    <button>
+                        <span class="material-symbols-outlined">
+                            favorite
+                        </span>
+                        Add to fav
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="cards">
+            <div id="poster">
+                <img src="img/ucm_poster07.jpg">
+            </div>
+            <div id="datalist">
+                <h1 id="m">Movie name</h1>
+                <p>Lorem ipsum dolor,<br>
+                    sit amet consectetur<br>
+                    Corrupti temporibus </p>
+                <div id="rate">
+                    <input type="radio" id="star1">
+                    <label for="star1"></label>
+                    <input type="radio" id="star2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star3">
+                    <label for="sta3r"></label>
+                    <input type="radio" id="star4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star5">
+                    <label for="sta5r"></label>
+                    <br>
+                    <button>
+                        <span class="material-symbols-outlined">
+                            favorite
+                        </span>
+                        Add to fav
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="info">
+        <div id="logo">
+            <img src="img/e.png">
+            <a href="#">cimna</a>
+        </div>
+        <div id="inforighr">
+            <a href="">politics</a>
+            <a href="">payement</a>
+            <a href="">tv_shows</a>
+            <a href="">movies</a>
+            <input type="search" placeholder="search">
+        </div>
+    </section>
+    <section id="last">
+        <div id="p1left">
+            <h3>copy right@2023 all the rights are presrved </h3>
+        </div>
+        <div id="p1right">
+            <img src="img/card_img.png" </div>
+    </section>
+</body>
+
+</html>
